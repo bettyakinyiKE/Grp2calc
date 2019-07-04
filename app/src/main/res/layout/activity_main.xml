@@ -18,12 +18,10 @@
             android:layout_height="60dp"
             android:id="@+id/et_screen1_id"/>
 
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/tv_sreen2_id"/>
+            android:id="@+id/tv_screen2_id"/>
 
 
 
@@ -35,12 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/r1_et_tv_id">
 
-
-
-
-
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +42,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonOne_id"
+                android:id="@+id/bt_buttonseven_id"
                 android:text="7"
                 android:onClick="sevenMethod"
                 android:layout_marginStart="20dp"/>
@@ -58,14 +50,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonTwo_id"
+                android:id="@+id/bt_buttoneight_id"
                 android:text="8"
                 android:onClick="eightMethod"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonThree_id"
+                android:id="@+id/bt_buttonnine_id"
                 android:text="9"
                 android:onClick="nineMethod"
                 />
@@ -73,7 +65,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonFour_id"
+                android:id="@+id/bt_division_id"
                 android:text="/"
                 android:onClick="divisionMethod"/>
 
@@ -93,7 +85,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonsix_id"
+                android:id="@+id/bt_buttonfour_id"
                 android:text="4"
                 android:onClick="fourMethod"
                 android:layout_marginStart="20dp"/>
@@ -101,14 +93,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonseven_id"
+                android:id="@+id/bt_buttonfive_id"
                 android:text="5"
                 android:onClick="fiveMethod"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttoneight_id"
+                android:id="@+id/bt_buttonsix_id"
                 android:text="6"
                 android:onClick="sixMethod"
                 />
@@ -116,7 +108,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttoneigt_id"
+                android:id="@+id/bt_multiplication_id"
                 android:text="*"
                 android:onClick="multiplicationMethod"/>
 
@@ -134,7 +126,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttonnine_id"
+                android:id="@+id/bt_buttonone_id"
                 android:text="1"
                 android:onClick="oneMethod"
                 android:layout_marginStart="20dp"/>
@@ -142,14 +134,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttoten_id"
+                android:id="@+id/bt_buttontwo_id"
                 android:text="2"
                 android:onClick="twoMethod"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttoneleven_id"
+                android:id="@+id/bt_buttonthree_id"
                 android:text="3"
                 android:onClick="threeMethod"
                 />
@@ -157,7 +149,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_buttontwelve_id"
+                android:id="@+id/bt_subtraction_id"
                 android:text="-"
                 android:onClick="subtractionMethod"/>
 
@@ -179,7 +171,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_button13_id"
+                android:id="@+id/bt_point_id"
                 android:text="."
                 android:onClick="pointMethod"
                 android:layout_marginStart="20dp"/>
@@ -187,14 +179,14 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_button14_id"
+                android:id="@+id/bt_buttonzero_id"
                 android:text="0"
                 android:onClick="zeroMethod"
                 />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_button15_id"
+                android:id="@+id/bt_equal_id"
                 android:text="="
                 android:onClick="equalMethod"
                 />
@@ -202,13 +194,42 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/bt_button16_id"
+                android:id="@+id/bt_addition_id"
                 android:text="+"
                 android:onClick="additionMethod"/>
 
+
+
+
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_buttons5_id"
+            android:layout_below="@id/ll_buttons4_id">
 
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_cancel_id"
+                android:text="c"
+                android:paddingRight="85dp"
+                android:paddingLeft="80dp"
+                android:layout_marginStart="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_delete_id"
+                android:text="del"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                />
+
+        </LinearLayout>
 
 
 
