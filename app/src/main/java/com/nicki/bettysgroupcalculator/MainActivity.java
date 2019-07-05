@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private Button cancel;
     private Button delete;
 
-    float Value1, Value2;
-    boolean mAddition, mMultiplication, mDivision, mPlus;
+    float mValue1, mValue2;
+    boolean mAddition, mMultiplication, mDivision, mPlus, mSubtraction;
 
 
     @Override
@@ -140,33 +140,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button addition = (Button)findViewById(R.id.bt_addition_id);
+        final Button addition = (Button)findViewById(R.id.bt_addition_id);
         addition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.et_screen1_id);
-                TextView myTextView = (TextView) findViewById(R.id.tv_screen2_id);
-                myEditText.setText(myEditText.getText()+"+");
-            }
-        });
+                mValue1 = Float.parseFloat(myEditText.getText() + "");
+                mAddition = true;
+                myEditText.setText(mValue1 + mValue2 + "");
+            }});
 
         Button subtraction = (Button)findViewById(R.id.bt_subtraction_id);
         subtraction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.et_screen1_id);
-                TextView myTextView = (TextView) findViewById(R.id.tv_screen2_id);
-                myEditText.setText(myEditText.getText()+"-");
+
+                mValue2 = Float.parseFloat(myEditText.getText() + "");
+
+                if (mSubtraction == true){
+                    myEditText.setText(mValue1 - mValue2 +"");
+                    mSubtraction=false;
             }
-        });
+        }});
 
         Button multiplication = (Button)findViewById(R.id.bt_multiplication_id);
         multiplication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.et_screen1_id);
-                TextView myTextView = (TextView) findViewById(R.id.tv_screen2_id);
-                myEditText.setText(myEditText.getText()+"*");
+                mValue1 = Float.parseFloat(myEditText.getText() + "");
+                mMultiplication = true;
+                myEditText.setText(mValue1 * mValue2 + "");
             }
         });
 
@@ -174,23 +176,43 @@ public class MainActivity extends AppCompatActivity {
         division.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.et_screen1_id);
-                TextView myTextView = (TextView) findViewById(R.id.tv_screen2_id);
-                myEditText.setText(myEditText.getText()+"/");
+                mValue1 = Float.parseFloat(myEditText.getText() + "");
+                mValue2 = Float.parseFloat(myEditText.getText() + "");
+                mDivision = true;
+                myEditText.setText(mValue1 / mValue2 + "");
             }
         });
 
-        Button equal = (Button)findViewById(R.id.bt_equal_id);
-        equal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                EditText myEditText = (EditText) findViewById(R.id.et_screen1_id);
-                TextView myTextView = (TextView) findViewById(R.id.tv_screen2_id);
-                myEditText.setText(myEditText.getText()+"=");
-                
+       Button equal =(Button)findViewById(R.id.bt_equal_id);
+       equal.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               mValue2=Float.parseFloat(myEditText.getText () +"");
+               if(mAddition == true){
+                   myEditText.setText(mValue1 + mValue2 + "");
+                   mAddition =false;}
 
-            }
-        });
+
+                   if(mSubtraction == true){
+                       myEditText.setText(mValue1 - mValue2 + "");
+                       mSubtraction = false;}
+
+                       if(mDivision == true){
+                           myEditText.setText(mValue1 / mValue2 + "");
+                           mDivision = false;}
+
+                           if(mMultiplication == true);{
+                           myEditText.setText(mValue1 * mValue2 + "");
+                           mMultiplication = false;}
+
+
+
+
+
+           }
+       });
+
+
 
         Button point = (Button)findViewById(R.id.bt_point_id);
         point.setOnClickListener(new View.OnClickListener() {
